@@ -4,8 +4,9 @@
 void win(){
     printf("congrats player you did it \n\t\t here is your flag: ");
     int flagfd = open("flag.txt", 'r');
-    char flag[20];
-    read(flagfd, flag, 1337);
+    char flag[50];
+    int bytes = read(flagfd, flag, 1337);
+    flag[bytes] = '\0';
     printf("%s\n", flag);
 }
 
