@@ -1,4 +1,4 @@
-[x] integer
-[x] freebie
-[] stacky
-[] distance
+- [x] integer
+- [x] freebie
+- [ ] stacky
+- [ ] distance
