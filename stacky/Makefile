@@ -1,6 +1,4 @@
-NAME=stacky
-CFLAGS = -Wno-implicit-function-declaration
-
+NAME=challenge
 
 all:
-	gcc $(CFLAGS) -no-pie -fno-stack-protector -Wl,-Ttext-segment=0x41410000 -o challenge challenge.c 2>&1 | grep -v "gets"
+	gcc  --ni-pie -o $(NAME) challenge.c

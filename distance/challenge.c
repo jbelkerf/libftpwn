@@ -6,6 +6,7 @@
 
 char buff[100];
 int main(){
+    setvbuf(stdout, NULL, _IONBF, 0);
     char name[8];
     int offset = 0; 
     buff[read(open("flag.txt", 'r'), buff + 42 , 30)+42] = 0;

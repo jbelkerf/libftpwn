@@ -10,6 +10,7 @@ char flag[50];
 void game(){
     printf("Welcome to the game!\n");
     size_t number = 0;
+    printf("gimme your lucky number \n");
     scanf("%ld", &number);
     if (number == 1){
         printf("good choise but it gives nothing\n");
@@ -29,7 +30,8 @@ void game(){
 }
 
 int main(int argc, char **argv){
-    int fd = open("flag.txt", 'r');
+    setvbuf(stdout, NULL, _IONBF, 0);
+    int fd = open("flag.txt", 0);
     
     int bytes = read(fd, flag, 50);
     flag[bytes] = '\0';

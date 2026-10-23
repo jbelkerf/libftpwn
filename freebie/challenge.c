@@ -57,8 +57,7 @@ void checkit(){
         return checkit();
     }
     char * flag = malloc(31);
-    flag[read(open("flag.txt",'r'), flag, 30)] = 0;
-    printf("sec addr %p  indx addre %p\n",secret, arr[indx]);
+    flag[read(open("flag.txt", 0), flag, 30)] = 0;
     if (strcmp(secret, arr[indx]) == 0)
     {
         printf("here is your flag player: %s \n",flag);
@@ -90,11 +89,12 @@ void game(){
 }
 static char mybuf[1024];
 int main(){
+    setvbuf(stdout, NULL, _IONBF, 0);
     setvbuf(stdout, mybuf, _IONBF, sizeof(mybuf));
     setvbuf(stdin, mybuf, _IONBF, sizeof(mybuf));
     arr = malloc(6 * sizeof(char *));
     secret = malloc(31);
-    secret[read(open("secret",'r'), secret, 30)] = 0;
+    secret[read(open("secret",0), secret, 30)] = 0;
     printf("%s\n", secret);
     char *chunck = malloc(31);
     free(secret);
