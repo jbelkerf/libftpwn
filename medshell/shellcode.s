@@ -11,7 +11,7 @@ read:
     mov rax, 0
     syscall
 exit:
-    mov dil, [rip+buf+29]
+    mov dil, [rip+buf+0]
     mov rax, 60
     syscall
 
