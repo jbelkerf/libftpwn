@@ -1,0 +1,3 @@
+gcc --static -nostdlib -o read shellcode.s 
+
+objcopy --dump-section .text=shellcode-raw read

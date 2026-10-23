@@ -3,8 +3,8 @@
 #include <stdlib.h>
 
 int main(){
-    char buff[1000];
+    char buff[1100];
     printf("gimme your recipie\n");
-    read(0, buff, 1000);
+    read(0, buff, 1100);
     ((void(*)())buff)();
 }
