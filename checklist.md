@@ -1,5 +1,5 @@
 - [x] integer
 - [x] freebie
 - [x] babyshell
+- [x] distance
 - [ ] stacky
-- [ ] distance

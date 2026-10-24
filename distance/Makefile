@@ -1,4 +1,4 @@
 NAME=challenge
 
 all:
-	gcc  -o $(NAME) challenge.c
+	gcc  -no-pie -fno-stack-protector  -o $(NAME) challenge.c

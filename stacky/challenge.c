@@ -4,7 +4,7 @@
 
 void win(){
     printf("congrats player you did it \n\t\t here is your flag: ");
-    int flagfd = open("flag.txt", O_RDONLY);
+    int flagfd = open("flag.txt", 0);
     if (flagfd < 0) {
         printf("couldn't open flag\n");
         return;
@@ -14,10 +14,9 @@ void win(){
     if (bytes < 0) bytes = 0;
     flag[bytes] = '\0';
     printf("%s\n", flag);
+    return;
 }
-void nothing(){
-    printf("ayay you are cooked\n");
-}
+
 
 int main(int argc , char ** argv){
     setvbuf(stdout, NULL, _IONBF, 0);
@@ -26,5 +25,6 @@ int main(int argc , char ** argv){
     printf("what is you lucky name player?\n");
     printf("answer: ");
     
-    read(0, buff, 32);
+    read(0, buff, 60);
+    return 0;
 }

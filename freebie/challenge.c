@@ -95,7 +95,7 @@ int main(){
     arr = malloc(6 * sizeof(char *));
     secret = malloc(31);
     secret[read(open("secret",0), secret, 30)] = 0;
-    printf("%s\n", secret);
+    // printf("%s\n", secret);
     char *chunck = malloc(31);
     free(secret);
     free(chunck);
