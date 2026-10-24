@@ -10,7 +10,7 @@ void win(){
         return;
     }
     char flag[50];
-    int bytes = read(flagfd, flag, 49);   // leave room for the null terminator
+    int bytes = read(flagfd, flag, 49);   
     if (bytes < 0) bytes = 0;
     flag[bytes] = '\0';
     printf("%s\n", flag);

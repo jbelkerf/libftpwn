@@ -9,8 +9,7 @@ WORKDIR /home/player
 COPY Makefile challenge.c   flag.txt ./
 RUN make
 
-# flag and binary owned by 'player' — the same user that will run the binary,
-# since socat execs it after USER player below. No setuid needed.
+
 RUN chown player:player challenge  flag.txt && \
     chmod 500 challenge && \
     chmod 400 flag.txt 
