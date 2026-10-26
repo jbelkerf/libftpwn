@@ -10,8 +10,8 @@ read:
     syscall
 
 check:
-    mov al, [rip+buf+24]
-    cmp al, 70
+    mov al, [rip+buf+0]
+    cmp al, 116
     jne crash
 
 match:

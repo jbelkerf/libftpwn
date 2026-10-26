@@ -19,7 +19,7 @@ int main(){
     printf("what is your name player?\n");
     read(0, name, 16);
     if (auth)
-        printf("hello %s here is your buffer %s\n", name, (buff + 42));
+        printf("hello %s here is your buffer %s\n", name, (buff + offset));
     else
         printf("you are not autorized \n");
 }
